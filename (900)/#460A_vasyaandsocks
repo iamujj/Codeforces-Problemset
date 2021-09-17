@@ -1,0 +1,27 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cin >> n >> m;
+
+    int temp = n;
+    int p, s;
+
+    while (1)
+    {
+        p = temp / m;
+        s = n + p;
+
+        if (s == temp)
+            break;
+
+        temp = s;
+    }
+
+    cout << temp;
+
+    return 0;
+}
