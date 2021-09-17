@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    long long n, k;
+    long long noo, noe, ans;
+    cin >> n >> k;
+
+    if (n % 2 == 1)
+    {
+        noo = (n + 1) / 2;
+        noe = (n - 1) / 2;     
+    }
+    else
+    {
+        noo = n / 2;
+        noe = n / 2;
+    }
+
+    if (k <= noo)
+    {
+        ans = 2 * k - 1;
+    }
+    else
+    {
+        ans = 2 * (k - noo);
+    }
+
+    cout << ans;
+
+    return 0;
+}
