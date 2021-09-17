@@ -1,0 +1,33 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    int l = (int)s.length();
+    int c = 0;
+
+    //to convert the string to lowerbase
+    for (int i = 0; i < l; i++)
+    {
+        if ((int)s.at(i) > 96 && (int)s.at(i) < 123);
+        else
+        {
+            int temp = (int)s.at(i);
+            s.at(i) = char(temp + 32);
+        }
+    }
+
+    for (int i = 0; i < l; i++)
+    {
+        if (s.at(i) == 'a' || s.at(i) == 'e' || s.at(i) == 'i' || s.at(i) == 'o' || s.at(i) == 'u' || s.at(i) == 'y');
+        else
+        {
+            cout << '.' << s.at(i);
+        }
+    }
+        
+    return 0;
+}
