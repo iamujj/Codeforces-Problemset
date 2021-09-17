@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int k, n, w;
+    cin >> k >> n >> w;
+    int m = 0;
+
+    for (int i = 1; i <= w; i++)
+        m = m + i;
+
+    int p = m * k;
+
+    if (p <= n)
+        cout << '0';
+    else
+        cout << (p - n);
+
+    return 0;
+}
