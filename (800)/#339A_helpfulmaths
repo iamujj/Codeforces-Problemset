@@ -1,0 +1,55 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    string str;
+    cin >> str;
+    int n = (int)str.length();
+    int c1 = 0, c2 = 0, c3 = 0;
+    int tc1, tc2, tc3;
+
+    for (int i = 0; i < n;)
+    {
+        char p = str.at(i);
+        if (p == '1')
+            c1++;
+        if (p == '2')
+            c2++;
+        if (p == '3')
+            c3++;
+
+        i += 2;
+    }
+
+    tc1 = c1;
+    tc2 = c2;
+    tc3 = c3;
+
+    for (int i = 0; i < c1; i++)
+    {
+        cout << '1';
+        tc1--;
+        if (tc1 || c2 != 0 || c3 != 0)
+            cout << '+';
+    }
+
+    for (int i = 0; i < c2; i++)
+    {
+        cout << '2';
+        tc2--;
+        if (tc2 || c3 != 0)
+            cout << '+';
+    }
+
+    for (int i = 0; i < c3; i++)
+    {
+        cout << '3';
+        tc3--;
+        if (tc3)
+            cout << '+';
+    }
+
+    return 0;
+}
