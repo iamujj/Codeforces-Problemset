@@ -1,0 +1,23 @@
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main()
+{
+    string str[2];
+    cin >> str[0];
+    cin >> str[1];
+
+    transform(str[0].begin(), str[0].end(), str[0].begin(), ::tolower);
+    transform(str[1].begin(), str[1].end(), str[1].begin(), ::tolower);
+
+    if (str[0] == str[1])
+        cout << 0;
+    if (str[0] < str[1])
+        cout << -1;
+    if (str[0] > str[1])
+        cout << 1;
+
+    return 0;
+}
