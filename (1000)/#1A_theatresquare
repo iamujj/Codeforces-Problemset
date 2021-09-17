@@ -1,0 +1,45 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    long long n, m, a;
+    cin >> n >> m >> a;
+
+    long long l, b;
+
+    if (a < n)
+    {
+        long long rem = n % a;
+        if (rem == 0)
+            l = n / a;
+        else
+        {
+            int qu = (n - rem) / a;
+            l = qu + 1;
+        }
+    }
+    else
+        l = 1;
+
+    if (a < m)
+    {
+        long long rem = m % a;
+        if (rem == 0)
+            b = m / a;
+        else
+        {
+            int qu = (m - rem) / a;
+            b = qu + 1;
+        }
+    }
+    else
+        b = 1;
+
+    long long ans = l * b;
+
+    cout << ans;
+
+    return 0;
+}
