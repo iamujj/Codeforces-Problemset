@@ -1,0 +1,32 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, c = 1, ans = 1;
+    cin >> n;
+    int* arr = new int[n];
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    for (int j = 0; j < n - 1; j++)
+    {
+        int s = j + 1;
+        int chkb = arr[j];
+        int chka = arr[s];
+        if (chka >= chkb)
+            c++;
+        else
+            c = 1;
+        if (c > ans)
+        {
+            ans = c;
+        }
+    }
+
+    cout << ans;
+
+    return 0;
+}
