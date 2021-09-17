@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    char c = s.at(0);
+    int t = (int)c;
+    int n = t - 32;
+    char p = (char)n;
+    string a = "";
+    a = a + p;
+    
+    if (t >= 65 && t <= 90)
+        cout << s;
+    else
+    {
+        s.replace(0, 1, a);
+        cout << s;
+    }
+    
+    return 0;
+}
