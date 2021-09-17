@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int n;
+        cin >> n;
+
+        for (int k = 2;; k++)
+        {
+            int po = (int)pow(2.0, k);
+            int p = po - 1;
+            if (n % p == 0)
+            {
+                int ans = n / p;
+                cout << ans << "\n";
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
